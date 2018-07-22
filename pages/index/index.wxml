@@ -1,0 +1,33 @@
+<view class="page">
+  <!--导航栏-->
+  <scroll-view scroll-x>
+    <view class="swiper-tab">
+      <text wx:for="{{category_all}}" data-current="{{index}}" class="tab-item {{currentTab==index ? 'on' : ''}}" wx:key="unique" bindtap="swichNav">{{item}}</text>
+    </view>
+  </scroll-view>
+
+
+  <!--内容主体-->
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+    <block wx:for="{{category_all}}" wx:key="">
+      <swiper-item>
+        <scroll-view scroll-y='true'>
+          <view class="news-container" wx:for="{{news}}" wx:key="" bindtap='onTapNews' id="{{item.url}}">
+            <view class="news-item">
+              <view class="news-content">
+                <view class="news-title">{{item.title}}</view>
+                <view class="news-source">{{item.source}}</view>
+              </view>
+              <image class="news-img" src="{{item.img}}"></image>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--加载提示-->
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>
