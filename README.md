@@ -10,7 +10,7 @@
 随时下拉刷新。点击具体新闻实现跳转至详情页面，详情页面包含该新闻的标题作者，时间以及正文。
 
 导航栏由横向滚动的10项新闻类别构成，页面切换由```<swiper-item>```和```wx:for```实现，滑动或点击导航栏改变页面标识后
-，利用```wx.request```访问接口更新页面，接口MD5签名见平台文档。点击跳转和下拉刷新为```wx.navigateTo```和```onPullDownRefresh```
+，利用```wx.request```访问接口更新页面，接口MD5签名见平台文档。点击跳转和下拉刷新分别为```wx.navigateTo```和```onPullDownRefresh```。
 
 详情是接口提供url得到的html页面，小程序无法直接显示，因此将html页面转换为小程序页面通常有几种方法
 - ```<web-view>```[组件](https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html?search-key=web-view)是一个
