@@ -14,5 +14,5 @@
 
 详情是接口提供url得到的html页面，小程序无法直接显示，因此将html页面转换为小程序页面通常有几种方法
 - ```<web-view>```[组件](https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html?search-key=web-view)是一个可以用来承载网页的容器，方便快捷，但是个人类型的小程序暂不支持使用。。。
-- 使用```wxParse```[组件](https://github.com/icindy/wxParse)解析html页面，但新闻页面比较复杂，试用过后发现解析效果比较糟糕，bug很多，就放弃了。。。
+- 使用```wxParse```[组件](https://github.com/icindy/wxParse)解析html页面，但新闻页面比较复杂，试用过后发现解析效果比较糟糕，bug很多，就放弃了。。。同样[Towxml渲染库](https://github.com/sbfkcel/towxml)用来解析页面也是一样的结果。。。
 - 最后使用正则匹配获取文章正文中的图文段落，以及标题来源等信息重新排列，比较麻烦，也没有做更多的显示效果调整。
