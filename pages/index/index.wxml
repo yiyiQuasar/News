@@ -18,7 +18,7 @@
                 <view class="news-title">{{item.title}}</view>
                 <view class="news-source">{{item.source}}</view>
               </view>
-              <image class="news-img" src="{{item.img}}"></image>
+              <image class="news-img" src="{{item.img}}"  mode="aspectFit"></image>
             </view>
           </view>
         </scroll-view>

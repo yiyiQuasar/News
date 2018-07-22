@@ -10,7 +10,7 @@
     </view>
     <view class="detail-post-content" wx:for="{{detail.item}}" wx:key=''>
       <text class="content-info" index="{{index}}" wx:if="{{item.type == 'text'}}">{{ item.content }}</text>
-      <image class="content-info" index="{{index}}" wx:elif="{{item.type == 'img'}}" src="{{item.content}}"></image>
+      <image class="content-info" index="{{index}}" wx:elif="{{item.type == 'img'}}" src="{{item.content}}"  mode="aspectFit"></image>
     </view>
     <view class="end"></view>
   </view>

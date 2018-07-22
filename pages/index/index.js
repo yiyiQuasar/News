@@ -9,7 +9,7 @@ Page({
     hidden: false
   },
   swichNav: function(e) {
-    var that = this;
+    let that = this;
     if (this.data.currentTab === e.target.dataset.current) {
       return false;
     } else {
@@ -43,7 +43,7 @@ Page({
         signature: md5.hexMD5('49b124f6424340d0aba690c9238c1e10' + timestamp + 'Ax7UB7fs1gSfmVHH')
       },
       success: res => {
-        var self = this;
+        let self = this;
         let result = res.data.data.news
         let news = []
         for (let i = 0; i < 10; i += 1) {
@@ -67,7 +67,7 @@ Page({
         }, 100)
       },
       complete: () => {
-        callback && callback()
+        typeof callback === 'function' && callback()
       }
     })
 
@@ -86,27 +86,13 @@ Page({
       wx.stopPullDownRefresh()
     })
   },
-  onReady: function() {
-    // 生命周期函数--监听页面初次渲染完成
-  },
-  onShow: function() {
-    // 生命周期函数--监听页面显示
-  },
-  onHide: function() {
-    // 生命周期函数--监听页面隐藏
-  },
-  onUnload: function() {
-    // 生命周期函数--监听页面卸载
-  },
-  onReachBottom: function() {
-    // 页面上拉触底事件的处理函数
-  },
-  onShareAppMessage: function() {
-    // 用户点击右上角分享
-    return {
-      title: 'title', // 分享标题
-      desc: 'desc', // 分享描述
-      path: 'path' // 分享路径
-    }
-  }
+  
+  // onShareAppMessage: function() {
+  //   // 用户点击右上角分享
+  //   return {
+  //     title: 'title', // 分享标题
+  //     desc: 'desc', // 分享描述
+  //     path: 'path' // 分享路径
+  //   }
+  // }
 })

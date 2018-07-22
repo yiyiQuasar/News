@@ -6,8 +6,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#dfdfdf",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true
+    "navigationBarTitleText": "News",
+    "navigationBarTextStyle": "black"
   }
 }
