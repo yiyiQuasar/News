@@ -89,7 +89,7 @@
   margin-left: 20rpx;
   width: 200rpx;
   height: 200rpx;
-  background-color: yellow;
+  background-color: #dfdfdf;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
